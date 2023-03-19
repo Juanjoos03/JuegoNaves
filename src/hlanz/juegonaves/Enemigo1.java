@@ -19,14 +19,14 @@ public class Enemigo1 extends Enemigo {
 
     @Override
     public int getPuntuacion() {
-        return Math.abs(velocidad * 2);
+        return Math.abs(velocidad * 1);
     }
 
     @Override
     public void ejecutarFrame() {
         this.moverX(velocidad);
-        if ((this.getX()==0)||this.getX()+this.getAnchura()== this.juego.getAnchuraPantalla()) {
-            velocidad=(-velocidad);
+        if ((this.getX() == 0) || this.getX() + this.getAnchura() == this.juego.getAnchuraPantalla()) {
+            velocidad = (-velocidad);
         }
     }
 
