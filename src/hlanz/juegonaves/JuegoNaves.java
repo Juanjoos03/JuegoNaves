@@ -8,9 +8,6 @@ import bpc.framework.consola.Escena;
 import bpc.framework.consola.GameObject;
 import bpc.framework.consola.Juego;
 import bpc.framework.consola.Resolucion;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.List;
 
