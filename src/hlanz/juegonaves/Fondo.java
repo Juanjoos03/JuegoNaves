@@ -22,7 +22,7 @@ public class Fondo extends GameObject {
         imagen = CacheImagenes.getInstancia().getImagen("fondo.png");
         camara = new Rectangle();
     }
-
+    
     @Override
     public void inicializar() {
         camara = new Rectangle(0, 0, this.juego.getAnchuraPantalla(), this.juego.getAlturaPantalla());
@@ -31,15 +31,18 @@ public class Fondo extends GameObject {
     @Override
     public void ejecutarFrame() {
         consola.getCapaCanvas().getGraphics().drawImage(imagen, camara.x, camara.y, null);
+        /* 
         camara.setLocation(0, camara.y + velocidadCamara);
         if (camara.y >= imagen.getHeight(null)) {
             camara.x = 0;
             camara.y = 0;
         }
+        */
     }
 
     @Override
     public void finalizar() {
-
+    
     }
+    
 }
