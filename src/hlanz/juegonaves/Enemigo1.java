@@ -14,7 +14,7 @@ public class Enemigo1 extends Enemigo {
 
     public Enemigo1(int x, int y, int v) {
         super(x, y, CacheImagenes.getInstancia().getImagen("malo1.png"));
-        velocidad = v;
+        velocidad = v * 2;
     }
 
     @Override
