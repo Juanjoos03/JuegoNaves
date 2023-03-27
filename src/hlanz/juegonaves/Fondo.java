@@ -31,13 +31,12 @@ public class Fondo extends GameObject {
     @Override
     public void ejecutarFrame() {
         consola.getCapaCanvas().getGraphics().drawImage(imagen, camara.x, camara.y, null);
-        /* 
-        camara.setLocation(0, camara.y + velocidadCamara);
-        if (camara.y >= imagen.getHeight(null)) {
+        camara.y=camara.y+velocidadCamara;
+        camara.setLocation(0, camara.y);
+        if (camara.y >= 0) {
             camara.x = 0;
-            camara.y = 0;
+            camara.y = -imagen.getHeight(null)/2;
         }
-        */
     }
 
     @Override
