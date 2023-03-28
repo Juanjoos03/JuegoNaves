@@ -29,7 +29,7 @@ public class JuegoNaves extends Escena {
         Juego juego = new Juego();
         Escena nave = new JuegoNaves();
 
-        juego.iniciar(nave, Resolucion.VENTANA_QHD);
+        juego.iniciar(nave, Resolucion.PANTALLA_COMPLETA);
         // System.out.println(juego.getAnchuraPantalla());
 
     }
