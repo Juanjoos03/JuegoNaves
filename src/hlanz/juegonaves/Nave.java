@@ -13,13 +13,13 @@ import java.time.Duration;
  *
  * @author Juanjoos
  */
-public abstract class Nave extends SpriteGameObject {
+public abstract class Nave extends SpriteGameObject implements Vidas{
     private int teclaIzquierda;
     private int teclaDerecha;
     private int teclaDisparo;
     private int velocidad;
     private Instant ultimoDisparoRealizado;
-
+    private int vidas;
     public Nave(int ti, int tde, int tdi, int v, int x, int y, Image imagen) {
         super(imagen, x, y);
         teclaIzquierda = ti;
@@ -54,5 +54,28 @@ public abstract class Nave extends SpriteGameObject {
     }
 
     protected abstract void realizarDisparo();
+
+    @Override
+    public void setVidas(int vidas) {
+        this.vidas=vidas;
+    }
+
+    @Override
+    public int getVidas() {
+        return vidas;
+    }
+
+    @Override
+    public void restarVidas() {
+        vidas--;
+        if(vidas==0){
+            this.morir();
+        }
+    }
+
+    @Override
+    public void morir() {
+        this.finalizar();
+    }
 
 }
