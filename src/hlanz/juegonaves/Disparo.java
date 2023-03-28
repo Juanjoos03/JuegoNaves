@@ -48,8 +48,8 @@ public class Disparo extends SpriteGameObject {
             Enemigo e = jn.getEnemigos().get(i);
             if ((this.getX() < e.getX() + e.getAnchura() && this.getX() > e.getX()) &&
                     (this.getY() < e.getY() + e.getAltura() && this.getY() > e.getY())) {
-                e.finalizar();
                 jn.retirar(e);
+                e.restarVidas();
                 this.finalizar();
                 // Incrementar puntos
                 jn.getMarcador().incrementarPuntos(idjugador, e.getPuntuacion());
