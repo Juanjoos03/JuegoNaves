@@ -1,0 +1,43 @@
+diff --git a/ConsolaDAW.jar b/ConsolaDAW.jar
+new file mode 100644
+index 0000000..ba6663c
+Binary files /dev/null and b/ConsolaDAW.jar differ
+diff --git a/src/hlanz/juegonaves/Enemigo3.java b/src/hlanz/juegonaves/Enemigo3.java
+index e44a681..b3acb2d 100644
+--- a/src/hlanz/juegonaves/Enemigo3.java
++++ b/src/hlanz/juegonaves/Enemigo3.java
+@@ -8,18 +8,19 @@ package hlanz.juegonaves;
+  *
+  * @author Juanjoos
+  */
+-public class Enemigo1 extends Enemigo {
++public class Enemigo3 extends Enemigo {
+ 
+     private int velocidad;
+-
+-    public Enemigo1(int x, int y, int v) {
++    private int tiempoActivo;
++    
++    public Enemigo3(int x, int y, int v) {
+         super(x, y, CacheImagenes.getInstancia().getImagen("malo1.png"));
+         velocidad = v;
+     }
+ 
+     @Override
+     public int getPuntuacion() {
+-        return Math.abs(velocidad * 1);
++        return Math.abs(velocidad * 3); //triple de puntos
+     }
+ 
+     @Override
+@@ -28,6 +29,10 @@ public class Enemigo1 extends Enemigo {
+         if ((this.getX() == 0) || this.getX() + this.getAnchura() == this.juego.getAnchuraPantalla()) {
+             velocidad = (-velocidad);
+         }
++        /*Aumenta la velocidad la raíz cuadrada del tiempo que el enemigo ha
++        estado activo*/
++        tiempoActivo++;
++        velocidad += Math.sqrt(tiempoActivo);
+     }
+ 
+ }
