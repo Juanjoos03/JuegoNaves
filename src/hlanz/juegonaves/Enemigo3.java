@@ -1,18 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package hlanz.juegonaves;
 
-/**
- *
- * @author Juanjoos
- */
 public class Enemigo3 extends Enemigo {
 
     private int velocidad;
     private int tiempoActivo;
-    
+
     public Enemigo3(int x, int y, int v) {
         super(x, y, CacheImagenes.getInstancia().getImagen("malo1.png"));
         velocidad = v;
@@ -20,6 +12,7 @@ public class Enemigo3 extends Enemigo {
 
     @Override
     public int getPuntuacion() {
+
         return Math.abs(velocidad * 3); //triple de puntos
     }
 
@@ -34,5 +27,4 @@ public class Enemigo3 extends Enemigo {
         tiempoActivo++;
         velocidad += Math.sqrt(tiempoActivo);
     }
-
 }
