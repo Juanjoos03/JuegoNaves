@@ -65,6 +65,8 @@ public class JuegoNaves extends Escena {
         añadir(new Enemigo1(100, 200, 5));
         añadir(new Enemigo1(500, 400, 5));
         añadir(new Enemigo1(1000, 300, 5));
+        //añado nuevo Enemigo3
+        añadir(new Enemigo3(200, 300, 2));
         marcador = new Marcador();
         super.añadir(marcador);
     }
