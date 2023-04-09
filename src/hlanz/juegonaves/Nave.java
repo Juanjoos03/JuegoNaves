@@ -46,7 +46,7 @@ public abstract class Nave extends SpriteGameObject {
 
     public void disparar() {
         Instant now = Instant.now();
-        if (Duration.between(ultimoDisparoRealizado, now).getNano() > 350000000) {
+        if (Duration.between(ultimoDisparoRealizado, now).getNano() > 340000000) {
             ultimoDisparoRealizado = now;
             this.realizarDisparo();
         }

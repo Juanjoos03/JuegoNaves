@@ -29,7 +29,7 @@ public class JuegoNaves extends Escena {
         Juego juego = new Juego();
         Escena nave = new JuegoNaves();
 
-        juego.iniciar(nave, Resolucion.VENTANA_FULLHD);
+        juego.iniciar(nave, Resolucion.PANTALLA_COMPLETA);
         // System.out.println(juego.getAnchuraPantalla());
 
     }
@@ -54,8 +54,8 @@ public class JuegoNaves extends Escena {
     protected void añadirObjetosIniciales() {
 
         super.añadir(new Fondo(5));// Velocidad puesta por mi
-        // W D X
-        añadir(new Nave1(65, 68, 88));
+        // W D espacio
+        añadir(new Nave1(65, 68, 32));
         // FI FD FA
         añadir(new Nave2(37, 39, 38));
 
